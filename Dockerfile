@@ -1,9 +1,9 @@
 FROM node:alpine as builder
 WORKDIR '/app'
 
-COPY --chown=node:node package*.json ./
+COPY package*.json ./
 RUN npm install
-COPY --chown=node:node . .
+COPY . .
 RUN npm run build
 
 ## Create container for ngnix and move build file to /usr/share/nginx/html dir 

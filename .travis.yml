@@ -11,10 +11,10 @@ script:
 deploy:
   provider: elasticbeanstalk
   region: "us-east-1"
-  app: "Docker-test-2"
-  env: "Docker-test-2-env"
+  app: "Test-web-app"
+  env: "Test-web-app-env"
   bucket_name: "elasticbeanstalk-us-east-1-886640936384"
-  bucket_path: "Docker-test-2-env"
+  bucket_path: "Test-web-app-env"
   on:
     branch: main
   access_key_id: $AWS_ACCESS_KEY
